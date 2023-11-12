@@ -1,20 +1,20 @@
 import streamlit as st
 
 def main():
-    st.set_page_config(page_title="Medical Report Generator")
-    st.title("Medical Report Generator")
+    st.set_page_config(page_title="Electronic Health Record Generator")
+    st.title("Electronic Health Record Generator")
 
     # File uploader for conversation
-    st.subheader("Conversation")
-    conversation_file = st.file_uploader("Upload conversation file", type=["txt"])
+    st.subheader("New Report")
+    conversation_file = st.file_uploader("Upload report file", type=["txt"])
     if conversation_file is not None:
-        st.success("Conversation file uploaded successfully!")
+        st.success("Report file uploaded successfully!")
 
     # File uploader for doctor notes
-    st.subheader("Doctor Notes")
-    doctor_notes_file = st.file_uploader("Upload doctor notes file", type=["txt"])
+    st.subheader("Old EHR")
+    doctor_notes_file = st.file_uploader("Upload old EHR file", type=["txt"])
     if doctor_notes_file is not None:
-        st.success("Doctor notes file uploaded successfully!")
+        st.success("Patient EHR file uploaded successfully!")
 
     # File uploader for old reports
     st.subheader("Old Reports")
